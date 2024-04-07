@@ -4,7 +4,7 @@
 	"description": "Plugin to create and maintain plain text accounting ledger",
 	"main": "main.js",
 	"scripts": {
-		"dev": "onchange \"src/**/*.ts\" -- run-s lint test bundle",
+		"dev": "onchange \"src/**/*.ts\" \"tests/**/*.ts\" -- run-s lint test bundle",
 		"build": "run-s lint bundle",
 		"bundle": "rollup --bundleConfigAsCjs -c rollup.config.js",
 		"lint": "eslint \"*/**/*.{js,ts}\"",
@@ -33,5 +33,8 @@
 		"ts-jest": "^29.1.2",
 		"tslib": "2.4.0",
 		"typescript": "4.7.4"
+	},
+	"dependencies": {
+		"moment": "^2.30.1"
 	}
 }
