@@ -9,6 +9,7 @@
 		"bundle": "rollup --bundleConfigAsCjs -c rollup.config.js",
 		"lint": "eslint \"*/**/*.{js,ts}\"",
 		"test": "jest",
+		"test:runner": "onchange \"src/**/*.ts\" \"tests/**/*.ts\" -- run-s lint test",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
 	"keywords": [],
